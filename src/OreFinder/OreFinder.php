@@ -33,7 +33,7 @@ class OreFinder extends PluginBase implements CommandExecutor, Listener{
         }
         $this->getLogger()->info("Disabled.");
     }
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+    public function onCommand(CommandSender $sender, Command $cmd, $label){
         if($sender instanceof Player){
             if(isset($this->s[$sender->getName()])){
                 $sender->sendMessage("You already have a session open.");
